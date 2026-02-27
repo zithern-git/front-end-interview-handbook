@@ -21,6 +21,10 @@ A：声明文档的 HTML 版本，告诉浏览器用标准模式 / 怪异模式�
 Q：标准模式和怪异模式的核心区别？  
 A：标准模式严格遵循 W3C 规范（如盒模型 width 仅含内容），怪异模式兼容旧浏览器非标准规则，易导致布局错乱。  
 
+模式类型	触发条件	渲染规则	实际影响（面试常考）
+标准模式（Standards Mode）	写了正确的 DOCTYPE（如 HTML5 的 <!DOCTYPE html>）	严格遵循 W3C 标准解析页面（CSS 盒模型、布局、渲染都按规范来）	盒模型：width = 内容宽度（不含 padding/border）；布局符合现代规范
+怪异模式（Quirks Mode）	没写 DOCTYPE / DOCTYPE 写法错误 / 早期 HTML 写法	兼容老式浏览器（如 IE6/7）的非标准规则，模拟旧行为	盒模型：width = 内容 + padding+border；布局错乱（比如 margin 加倍）
+
 从中获得的启发：在页面开始处添加`<!DOCTYPE html>`即可。
 
 ###### 参考
