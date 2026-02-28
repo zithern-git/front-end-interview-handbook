@@ -13,7 +13,7 @@ import TOCInline from '@theme/TOCInline';
 `DOCTYPE`是“document type”的缩写。它是 HTML 中用来区分标准模式和[怪异模式](https://quirks.spec.whatwg.org/#history)的声明，用来告知浏览器使用标准模式渲染页面。
 
 `<!DOCTYPE>` 是**文档类型声明**，不属于 HTML 标签体系，没有结束标签，必须写在 HTML 文档的第一行（<html> 标签之前且无多余字符）；  
-它的本质是「告诉浏览器：当前文档遵循的 HTML 规范版本」，从而决定用「标准模式」还是「怪异模式」渲染。
+从中获得的启发：在页面开始处添加`<!DOCTYPE html>`即可。它的本质是「告诉浏览器：当前文档遵循的 HTML 规范版本」，从而决定用「标准模式」还是「怪异模式」渲染。
 
 面试高频追问：  
 Q：DOCTYPE 的作用？  
@@ -25,8 +25,6 @@ A：标准模式严格遵循 W3C 规范（如盒模型 width 仅含内容），�
 |------|------|------|------|
 |标准模式（Standards Mode）	|写了正确的 DOCTYPE（如 HTML5 的 <!DOCTYPE html>）	|严格遵循 W3C 标准解析页面（CSS 盒模型、布局、渲染都按规范来）	|盒模型：width = 内容宽度（不含 padding/border）；布局符合现代规范
 |怪异模式（Quirks Mode）	|没写 DOCTYPE / DOCTYPE 写法错误 / 早期 HTML 写法	|兼容老式浏览器（如 IE6/7）的非标准规则，模拟旧行为	| 盒模型：width = 内容 + padding+border；布局错乱（比如 margin 加倍）
-
-从中获得的启发：在页面开始处添加`<!DOCTYPE html>`即可。
 
 **HTML 核心语法（标签 / 属性名）不区分大小写，但部分场景（属性值 / 特殊属性 / 配套技术）会区分**  
 - 核心规则：HTML 标签名、普通属性名不区分大小写，但属性值、配套技术（CSS/JS）、特殊属性 区分；  
