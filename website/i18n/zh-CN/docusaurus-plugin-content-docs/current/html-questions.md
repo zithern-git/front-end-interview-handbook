@@ -12,7 +12,7 @@ import TOCInline from '@theme/TOCInline';
 
 `DOCTYPE`是“document type”的缩写。它是 HTML 中用来区分标准模式和[怪异模式](https://quirks.spec.whatwg.org/#history)的声明，用来告知浏览器使用标准模式渲染页面。
 
-`<!DOCTYPE>` 是**文档类型声明**，不属于 HTML 标签体系，没有结束标签，必须写在 HTML 文档的第一行（<html> 标签之前）；
+`<!DOCTYPE>` 是**文档类型声明**，不属于 HTML 标签体系，没有结束标签，必须写在 HTML 文档的第一行（<html> 标签之前且无多余字符）；  
 它的本质是「告诉浏览器：当前文档遵循的 HTML 规范版本」，从而决定用「标准模式」还是「怪异模式」渲染。
 
 面试高频追问：  
